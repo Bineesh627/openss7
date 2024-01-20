@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPX SS7 Scanner</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        button {
+            width: 60px;
+            height: 30px;
+            border-radius: 5px;
+            border-color: gray;
+            /* background-color: white; */
+        }
+        button:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="img/ss7.jpeg" alt="Company Logo" width="250" height="80">
+        </header>
+        <center>
+            <h2>Terminating SMS intercept by IMSI Attack</h2>
+        </center>
+        <table>
+            <tbody>
+                <tr>
+                    <td>DPC</td>
+                    <td>
+                        <input type="text" value="1561" size="4">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Victim IMSI</td>
+                    <td>
+                        <input type="text" value="0123456789" size="10">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button onclick="myFunction()" type="button">Attack!</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p id="output"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function myFunction() {
+            setTimeout(function () {
+                document.getElementById("output").innerHTML = "Hello World";
+            }, 10000);
+        }
+    </script>
+
+</body>
+
+</html>

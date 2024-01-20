@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpdateLocation</title>
+    <title>SendRoutingForSM</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 
@@ -14,8 +14,8 @@
         <header>
             <img src="img/ss7.jpeg" alt="Company Logo" width="250" height="80">
 
-            <h1>MAP Message Forming</h1>
-            <p style="color: rgb(242, 0, 49);">UpdateLocation</p>
+            <h1>MAP Message</h1>
+            <p style="color: rgb(242, 0, 49);">SendRoutingInfoForSM</p>
         </header>
         <label>MAP Message forming</label>
         <nav>
@@ -102,55 +102,57 @@
                 </tr>
             </table>
 
-            <h1>Update Location (Request)</h1>
+            <h1>Routing Info For SM (Request)</h1>
 
             <div class="form-section dotted-border">
-                <center>IMSI</center>
+                <center>MSISDN</center>
                 <table>
                     <tr>
-                        <td>IMSI</td>
+                        <td>Number Plan</td>
                         <td>
-                            <input type="text" name="Origination" value="01234556789" size="23">
+                            <select>
+                                <option value="bg" name="bg">ISDN/Telephoney (E.263, E.168)</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Nature Of Address</td>
+                        <td>
+                            <select>
+                                <option value="bg" name="bg">International</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Octet</td>
+                        <td>
+                            <select>
+                                <option value="text" name="text">Last Octet</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>MSISDN Address</td>
+                        <td>
+                            <input type="text" name="Origination" value="HIDDEN" size="10">
                         </td>
                     </tr>
                 </table>
             </div>
 
             <div class="form-section dotted-border">
-                <center>MSC Number</center>
+                <center>Short Message Priority</center>
                 <table>
                     <tbody>
                         <tr>
-                            <td>Number Plan</td>
+                            <td>SM_RP_PRI</td>
                             <td>
                                 <select>
-                                    <option value="bg" name="bg">ISDN/Telephoney (E.263, E.168)</option>
+                                    <option value="bg" name="bg">True</option>
                                 </select>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Nature Of Address</td>
-                            <td>
-                                <select>
-                                    <option value="bg" name="bg">International</option>
-                                </select>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Last Octet</td>
-                            <td>
-                                <select>
-                                    <option value="text" name="text">Last Octet</option>
-                                </select>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>MSISDN Address</td>
-                            <td>
-                                <input type="text" name="Origination" value="HIDDEN" size="10">
                             </td>
                         </tr>
                     </tbody>
@@ -158,7 +160,7 @@
             </div>
 
             <div class="form-section dotted-border">
-                <center>VLR Number</center>
+                <center>Service Centre</center>
                 <table>
                     <tbody>
                         <tr>
@@ -198,84 +200,37 @@
                 </table>
             </div>
 
-            <center>LMSI</center>
+            <center>GPRS Support Indicator</center>
             <table>
                 <tr>
-                    <td>LMSI</td>
+                    <td>GPRS Support Indicator</td>
                     <td>
-                        <input type="text" name="Origination" value="LMSI" size="10">
+                        <select>
+                            <option value="bg" name="bg">GPRS not supported</option>
+                        </select>
                     </td>
                 </tr>
             </table>
 
-            <center>VLR Capability</center>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>CAMEL Supported Phases</td>
-                        <td>
-                            <select multiple>
-                                <option value="bg" name="bg">Not Included</option>
-                                <option value="bg" name="bg">CAP Phase 1</option>
-                                <option value="bg" name="bg">CAP Phase 2</option>
-                                <option value="bg" name="bg">CAP Phase 3</option>
-                                <option value="bg" name="bg">CAP Phase 4</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Solsa Supported Indicator</td>
-                        <td>
-                            <select>
-                                <option value="bg" name="bg">Solsa Not Supported</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>IST Support Indicator</td>
-                        <td>
-                            <select>
-                                <option value="bg" name="bg">Not Supported</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Long-FTN Supported</td>
-                        <td>
-                            <select>
-                                <option value="bg" name="bg">Long-FTN not Supported</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p>Support LCS <br> Capability Set</p>
-                        </td>
-                        <td style="padding: 5px;">
-                            <select multiple>
-                                <option value="bg" name="bg">Not Included</option>
-                                <option value="bg" name="bg">LCS Capability Set 1</option>
-                                <option value="bg" name="bg">LCS Capability Set 2</option>
-                                <option value="bg" name="bg">LCS Capability Set 3</option>
-                                <option value="bg" name="bg">LCS Capability Set 4</option>
-                                <option value="bg" name="bg">LCS Capability Set 5</option>
-                            </select>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <center>Inform Previous Network Entity</center>
+            <center>SM-RP-MTI</center>
             <table>
                 <tr>
-                    <td>Inform Previous Network Entity</td>
+                    <td>SM-RP-MTI</td>
                     <td>
                         <select>
-                            <option value="bg" name="bg">Do not informs</option>
+                            <option value="bg" name="bg">SM-RP-MTI</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <center>SM-RP-SMEA</center>
+            <table>
+                <tr>
+                    <td>SM-RP-SMEA</td>
+                    <td>
+                        <select>
+                            <option value="bg" name="bg">SM-RP-SMEA</option>
                         </select>
                     </td>
                 </tr>
