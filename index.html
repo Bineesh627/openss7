@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpdateLocation</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="container">
 
         <header>
-            <img src="img/ss7.jpeg" alt="Company Logo" width="250" height="80">
+            <img src="img/ss7.jpeg" alt="openss7" width="250" height="80">
 
             <h1>MAP Message Forming</h1>
             <p style="color: rgb(242, 0, 49);">UpdateLocation</p>
@@ -25,7 +26,7 @@
             <h3><img src="img/icon.png" alt="Icon"> SCCP Called Party address</h3>
             <h3><img src="img/icon.png" alt="Icon"> TCAP Parameters</h3>
         </nav>
-        <form>
+        <form action="">
             <div class="form-section">
                 <table>
                     <tbody>
@@ -33,7 +34,7 @@
                             <td>TACAP Message Type</td>
                             <td>
                                 <select>
-                                    <option value="bg" name="bg">BEGIN</option>
+                                    <option value="bg" id="bg" name="bg">BEGIN</option>
                                 </select>
                             </td>
                         </tr>
@@ -41,21 +42,21 @@
                         <tr>
                             <td>Origination TID</td>
                             <td>
-                                <input type="text" name="Origination" value="INC" size="10">
+                                <input type="text" id="Origination" name="Origination" value="INC" size="10" required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>Destination TID</td>
                             <td>
-                                <input type="text" name="Destination" value="Destination TID" size="10">
+                                <input type="text" id="Destination" name="Destination" value="Destination TID" size="10" required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>Invoke ID</td>
                             <td>
-                                <input type="text" name="Invoke" value="01" size="10">
+                                <input type="text" id="Invoke" name="Invoke" value="01" size="10" required>
                             </td>
                         </tr>
 
@@ -63,7 +64,7 @@
                             <td>Dialouge Type</td>
                             <td>
                                 <select>
-                                    <option value="text" name="text">Dialouge Request</option>
+                                    <option value="text" id="Dialouge" name="Dialouge">Dialouge Request</option>
                                 </select>
                             </td>
                         </tr>
@@ -72,7 +73,7 @@
                             <td>Application Context Name</td>
                             <td>
                                 <select>
-                                    <option value="text" name="text">shortMsgGateway</option>
+                                    <option value="text" id="msg-gateway" name="msg-gateway">shortMsgGateway</option>
                                 </select>
                             </td>
                         </tr>
@@ -81,7 +82,7 @@
                             <td>Application Context Version</td>
                             <td>
                                 <select>
-                                    <option value="text" name="text">MAP version 3</option>
+                                    <option value="text" id="map-version" name="map-version">MAP version 3</option>
                                 </select>
                             </td>
                         </tr>
@@ -96,7 +97,7 @@
                     <td>Operation Code</td>
                     <td>
                         <select>
-                            <option value="text" name="text">SendRoutingInfoForSM</option>
+                            <option value="text" id="Operation-code" name="Operation-code">SendRoutingInfoForSM</option>
                         </select>
                     </td>
                 </tr>
@@ -110,7 +111,7 @@
                     <tr>
                         <td>IMSI</td>
                         <td>
-                            <input type="text" name="Origination" value="01234556789" size="23">
+                            <input type="text" id="Origination" name="Origination" value="01234556789" size="23" required>
                         </td>
                     </tr>
                 </table>
@@ -124,7 +125,7 @@
                             <td>Number Plan</td>
                             <td>
                                 <select>
-                                    <option value="bg" name="bg">ISDN/Telephoney (E.263, E.168)</option>
+                                    <option value="bg" id="bg" name="bg">ISDN/Telephoney (E.263, E.168)</option>
                                 </select>
                             </td>
                         </tr>
@@ -133,7 +134,7 @@
                             <td>Nature Of Address</td>
                             <td>
                                 <select>
-                                    <option value="bg" name="bg">International</option>
+                                    <option value="bg" id="bg" name="bg">International</option>
                                 </select>
                             </td>
                         </tr>
@@ -142,7 +143,7 @@
                             <td>Last Octet</td>
                             <td>
                                 <select>
-                                    <option value="text" name="text">Last Octet</option>
+                                    <option value="text" id="Octet" name="Octet">Last Octet</option>
                                 </select>
                             </td>
                         </tr>
@@ -150,7 +151,7 @@
                         <tr>
                             <td>MSISDN Address</td>
                             <td>
-                                <input type="text" name="Origination" value="HIDDEN" size="10">
+                                <input type="text" id="Origination" name="Origination" value="HIDDEN" size="10" required>
                             </td>
                         </tr>
                     </tbody>
@@ -191,7 +192,7 @@
                         <tr>
                             <td>Service Center Address</td>
                             <td>
-                                <input type="text" name="Origination" value="HIDDEN" size="10">
+                                <input type="text" name="Origination" value="HIDDEN" size="10" required>
                             </td>
                         </tr>
                     </tbody>
@@ -203,7 +204,7 @@
                 <tr>
                     <td>LMSI</td>
                     <td>
-                        <input type="text" name="Origination" value="LMSI" size="10">
+                        <input type="text" name="Origination" value="LMSI" size="10" required>
                     </td>
                 </tr>
             </table>
@@ -282,7 +283,7 @@
 
                 <tr>
                     <td>
-                        <button type="button">SEND!</button>
+                        <button type="submit">SEND!</button>
                     </td>
                 </tr>
             </table>

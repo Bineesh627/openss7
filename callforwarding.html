@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMS forward</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <style>
         input {
             width: 68%;
@@ -17,6 +19,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -24,32 +27,37 @@
         </header>
         <h1>MAP Responder</h1>
         <form action="">
-            <center><p>Timeout for working</p></center>
+            <center>
+                <p>Timeout for working</p>
+            </center>
             <div class="form-section dotted-border">
                 <table>
                     <tr>
                         <td>Timeout (sec)</td>
                         <td>
-                            <input type="text" value="300">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            
-            <center><p>Number of responder messages</p></center>
-            <div class="form-section dotted-border">
-                <table>
-                    <tr>
-                        <td>Number</td>
-                        <td>
-                            <input type="text" value="15">
+                            <input id="Timeout" name="Timeout" type="text" value="300" required>
                         </td>
                     </tr>
                 </table>
             </div>
 
-            <button>SEND!</button>
+            <center>
+                <p>Number of responder messages</p>
+            </center>
+            <div class="form-section dotted-border">
+                <table>
+                    <tr>
+                        <td>Number</td>
+                        <td>
+                            <input id="Number" name="Number" type="text" value="15" required>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <button type="submit">SEND!</button>
         </form>
     </div>
 </body>
+
 </html>
